@@ -1,4 +1,4 @@
-# module "extenral_dns" {
+# module "external_dns" {
 #   source = "../../"
 
 #   cluster_name                     = module.eks_cluster.eks_cluster_id
