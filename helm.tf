@@ -1,5 +1,5 @@
 resource "helm_release" "external_dns" {
-  depends_on = [var.mod_dependency]
+  depends_on = [var.mod_dependency, kubernetes_namespace.external_dns]
   count      = var.enabled ? 1 : 0
   chart      = var.helm_chart_name
   namespace  = var.namespace
