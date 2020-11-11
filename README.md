@@ -5,6 +5,22 @@
 
 Terraform module for deploying [External DNS](https://github.com/kubernetes-sigs/external-dns) inside a pre-existing EKS cluster.
 
+## Usage
+
+```
+module "external_dns" {
+  source = "git::https://github.com/DNXLabs/terraform-aws-eks-external-dns.git"
+
+  cluster_name                     = module.eks_cluster.cluster_id
+  cluster_identity_oidc_issuer     = module.eks_cluster.cluster_oidc_issuer_url
+  cluster_identity_oidc_issuer_arn = module.eks_cluster.oidc_provider_arn
+
+  settings = {
+    "policy" = "sync" # Modify how DNS records are sychronized between sources and providers.
+  }
+}
+```
+
 <!--- BEGIN_TF_DOCS --->
 
 ## Requirements
