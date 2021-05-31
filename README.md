@@ -57,7 +57,7 @@ module "external_dns" {
 | namespace | The Kubernetes namespace in which the external-dns service account has been created. | `string` | `"kube-system"` | no |
 | policy\_allowed\_zone\_ids | List of the Route53 zone ids for service account IAM role access. | `list(string)` | <pre>[<br>  "*"<br>]</pre> | no |
 | service\_account\_name | The Kubernetes external-dns service account name. | `string` | `"external-dns"` | no |
-| settings | Additional settings which will be passed to the Helm chart values, see https://github.com/bitnami/charts/tree/master/bitnami/external-dns#parameters. | `map(any)` | `{}` | no |
+| settings | Additional settings which will be passed to the Helm chart values, see https://github.com/bitnami/charts/tree/master/bitnami/external-dns#parameters. | `map` | `{}` | no |
 
 ## Outputs
 
