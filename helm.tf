@@ -32,12 +32,7 @@ resource "helm_release" "external_dns" {
     value = aws_iam_role.external_dns[0].arn
   }
 
-  dynamic "set" {
-    for_each = var.settings
-
-    content {
-      name  = set.key
-      value = set.value
-    }
-  }
+  values = [
+    yamlencode(var.settings)
+  ]
 }
