@@ -50,7 +50,7 @@ module "external_dns" {
 | create\_namespace | Whether to create k8s namespace with name defined by `namespace`. | `bool` | `true` | no |
 | enabled | Variable indicating whether deployment is enabled. | `bool` | `true` | no |
 | helm\_chart\_name | Helm chart name to be installed. | `string` | `"external-dns"` | no |
-| helm\_chart\_version | Version of the Helm chart. | `string` | `"5.0.0"` | no |
+| helm\_chart\_version | Version of the Helm chart. | `string` | `"6.10.2"` | no |
 | helm\_release\_name | Helm release name. | `string` | `"external-dns"` | no |
 | helm\_repo\_url | Helm repository. | `string` | `"https://charts.bitnami.com/bitnami"` | no |
 | mod\_dependency | Dependence variable binds all AWS resources allocated by this module, dependent modules reference this variable. | `any` | `null` | no |
